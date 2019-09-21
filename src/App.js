@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
-import AddBookmark from './components/AddBookmark'
+import AddBookmark from './AddBookmark/AddBookmark';
+import BookmarkApp from './BookmarkApp/BookmarkApp';
 
-class App extends Component {
+
+const bookmarks = [
+  {
+  title:"Google",
+  url:"http://www.google.com", 
+  rating:"3", 
+  description:"No evil"
+  },
+  {
+    title:"Google",
+    url:"http://www.google.com", 
+    rating:"3", 
+    description:"No evil"
+  }
+];
+
+export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <AddBookmark />
+        <BookmarkApp bookmarks={bookmarks}/>
+        
       </div>
     );
   }
 }
-
-export default App;
