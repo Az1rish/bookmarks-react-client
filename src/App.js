@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AddBookmark from './components/AddBookmark'
 
 class App extends Component {
   render() {
